@@ -1,0 +1,467 @@
+/* style.css */
+
+/* 1. body 배경색 설정 (#f8f9fa 또는 원하는 색상) */
+body {
+    padding-top: 35px;
+    background-color: #ffffff;
+    font-family: 'Pretendard', sans-serif;
+}
+
+#about {
+    background-color: #f5f6fa;
+    color: #34495e;
+}
+
+#contact {
+    background-color: #2c3e50;
+    color: #2f3640;
+}
+
+.navbar {
+    background-color: #2c3e50;
+}
+
+/* 2. hero-section 배경 그라데이션 설정 */
+
+.nav-link {
+    color: #bdc3c7;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.hero-section {
+    color: #f1f2f6;
+    min-height: 500px;
+}
+
+/* 3. 프로필 이미지 크기 설정 (150px ~ 200px 추천) */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #EEEEEE;
+    /* 4. 테두리 색상 설정 */
+}
+
+/* 5. 카드 호버 효과 추가 */
+.card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* 6. -5px 정도 추천 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    /* 7. 0.2 정도 추천 */
+}
+
+.hero-section h1,
+.hero-section p {
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 8. 섹션 제목 스타일 */
+h2 {
+    color: #2c3e50;
+    /* 원하는 색상 */
+    font-weight: bold;
+    /* 600 또는 700 추천 */
+    position: relative;
+    display: inline-block;
+}
+
+/* 9. 제목 아래 장식선 추가 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    /* 50px 추천 */
+    height: 3px;
+    /* 3px 추천 */
+    background-color: #393E46;
+    /* 원하는 색상 */
+}
+
+/* 10. 버튼 커스텀 스타일 */
+.btn {
+    padding: 12px 30px;
+    /* 12px 30px 추천 */
+    font-size: 16px;
+    /* 16px 추천 */
+    border-radius: 25px;
+    /* 25px 추천 */
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    /* 1.05 추천 */
+}
+
+.list-group-item {
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.list-group-item:hover {
+    transform: translateY(-5px);
+    /* 6. -5px 정도 추천 */
+    transform: scale(1.02);
+    /* 1.05 추천 */
+}
+
+/* 태블릿 반응형 (768px ~ 991px) */
+@media (max-width: 991px) {
+
+    /* 1. 카드 레이아웃 조정 */
+    .col-md-4 {
+        margin-bottom: 20px;
+        /* 20px 추천 */
+    }
+
+    /* 2. 패딩 조정 */
+    section {
+        padding: 40px 0;
+        /* 40px 추천 */
+    }
+}
+
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
+
+    /* 3. 모바일에서 프로필 이미지 크기 조정 */
+    .profile-img {
+        width: 120px;
+        /* 120px 추천 */
+        height: 120px;
+    }
+
+    /* 4. 모바일에서 제목 크기 조정 */
+    .display-4 {
+        font-size: 2rem;
+        /* 2rem 추천 */
+    }
+
+    /* 5. hero 섹션 높이 조정 */
+    .hero-section {
+        min-height: 400px;
+        /* 400px 추천 */
+        padding: 30px 0;
+        /* 30px 추천 */
+    }
+
+    /* 6. 네비게이션 간격 조정 */
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+
+/*도전과제*/
+
+/*과제 1*/
+/* 1. 타이핑 커서 효과 */
+.typing-cursor::after {
+    content: ' |';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 2. 그라데이션 배경 애니메이션 */
+.animated-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 3. 카드 3D 플립 효과 */
+.flip-card {
+    perspective: 1000px;
+    height: 300px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(360deg);
+}
+
+/* 4. 텍스트 글로우 효과 */
+.glow-text {
+    text-shadow: 0 0 10px #14ffdc,
+        0 0 20px #14ffdc,
+        0 0 30px #14ffdc,
+        0 0 40px #14ffdc;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+    /* 5. 파동 효과 버튼 */
+    .wave-btn {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .wave-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(0, 204, 204, 0.5);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .wave-btn:hover::before {
+        width: 150%;
+        height: 150%;
+    }
+
+
+
+/*과제 2*/
+
+
+    /* 타임라인 스타일 */
+/* style.css에 추가 또는 수정 */
+
+/* 지그재그 갤러리 (타임라인 컨테이너) */
+.zigzag-gallery {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* 타임라인 중앙 세로선 */
+.zigzag-gallery::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #2c3e50;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px; /* 아이템 간 간격 조정 */
+}
+
+/* 홀수 번째 아이템 (왼쪽 정렬) */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 55%; /* 오른쪽에 공간 확보 */
+    text-align: right;
+}
+
+/* 짝수 번째 아이템 (오른쪽 정렬) */
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 55%; /* 왼쪽에 공간 확보 */
+}
+
+/* 내용 상자 스타일 */
+.timeline-content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.timeline-content:hover{
+    transform: translateY(-5px);
+    transform: scale(1.05);
+}
+
+/* 날짜 원형 마커 */
+.timeline-date {
+    background-color: #e9ecef;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* 내용 상자 화살표 추가 (선택사항) */
+.timeline-item:nth-child(odd) .timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent #f8f9fa;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #f8f9fa transparent transparent;
+}
+
+h4{
+    font-size: 16px;
+}
+
+.zigzag-gallery p{
+    font-size: 12px;
+    color: #777777;
+}
+
+#contact h2::after {
+    background-color: #e2e2e2;
+    /* 원하는 색상 */
+}
+
+
+
+/*과제 3*/
+/* Bootstrap 커스터마이징 */
+:root {
+    --bs-primary: #3498db;  /* 커스텀 primary 색상 */
+    --bs-secondary: #95a5a6;
+    --bs-success: #2ecc71;
+    --bs-border-radius: 25px;
+    --bs-border-radius-lg: 30px;
+}
+.text-gradient {
+    background: linear-gradient(45deg, #3498db, #1abc9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-neon {
+    box-shadow: 0 0 20px rgba(20, 255, 220, 0.5),
+                0 0 40px rgba(20, 255, 220, 0.3);
+}
+
+.border-gradient {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #3498db, #1abc9c) 1;
+}
+/* 커스텀 카드 스타일 */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.neumorphism-card {
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+
+/*과제 4*/
+
+/* CSS 탭 구현 */
+.css-tabs input[type="radio"] {
+    display: none;
+}
+
+.css-tabs label {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #f0f0f0;
+    transition: all 0.3s;
+}
+
+.css-tabs input[type="radio"]:checked + label {
+    background: #393E46;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+    display: block;
+}
+
+/* 아코디언 메뉴 */
+.accordion-item input[type="checkbox"] {
+    display: none;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.accordion-item input:checked ~ .accordion-content {
+    max-height: 500px;
+}
+
+
+/*문제 발생과 해결*/
+/*햄버거 버튼 미작동 문제*/
+/*radio버튼의 줄넘김 현상*/
