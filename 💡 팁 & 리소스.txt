@@ -1,0 +1,38 @@
+💡 팁 & 리소스
+유용한 사이트
+Bootstrap 공식 문서: https://getbootstrap.com/docs
+CSS 애니메이션 예제: https://animista.net/
+그라데이션 생성기: https://cssgradient.io/
+색상 팔레트: https://colorhunt.co/
+무료 이미지: https://unsplash.com/
+CSS 트릭: https://css-tricks.com/
+
+
+
+
+자주 사용하는 Bootstrap 클래스 치트시트
+/* 레이아웃 */
+container, container-fluid, row, col-*
+d-none, d-block, d-flex, d-grid
+justify-content-*, align-items-*
+
+/* 간격 */
+m-0~5, p-0~5 (margin, padding)
+mt-, mb-, ms-, me-, mx-, my- (방향별)
+pt-, pb-, ps-, pe-, px-, py-
+
+/* 텍스트 */
+text-start, text-center, text-end
+text-uppercase, text-lowercase, text-capitalize
+fs-1~6, fw-bold, fw-normal, fst-italic
+
+/* 색상 */
+text-primary, text-secondary, text-success, text-danger
+bg-primary, bg-secondary, bg-light, bg-dark
+
+/* 테두리 */
+border, border-0, border-top, border-end
+rounded, rounded-circle, rounded-pill
+
+/* 그림자 */
+shadow-sm, shadow, shadow-lg
